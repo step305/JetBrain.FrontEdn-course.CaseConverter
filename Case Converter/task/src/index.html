@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <title>Case Converter</title>
+</head>
+<body>
+
+<div class="main-container">
+    <div class="title">Case Converter</div>
+    <textarea  class="text-to-process" id="text-content"></textarea>
+    <div class="button-menu">
+        <button class="button-convert" id="upper-case">UpperCase</button>
+        <button class="button-convert" id="lower-case">LowerCase</button>
+        <button class="button-convert" id="proper-case">ProperCase</button>
+        <button class="button-convert" id="sentence-case">SentenceCase</button>
+        <button class="button-convert" id="save-text-file">Save txt...</button>
+        <div class="invisible-placeholder"></div>
+    </div>
+</div>
+
+<script src="utils.js"></script>
+
+<script>
+    document.getElementById("upper-case").target_text_field_id = "text-content";
+    document.getElementById("lower-case").target_text_field_id = "text-content";
+    document.getElementById("proper-case").target_text_field_id = "text-content";
+    document.getElementById("sentence-case").target_text_field_id = "text-content";
+    document.getElementById("save-text-file").target_text_field_id = "text-content";
+    document.getElementById("upper-case").addEventListener('click', btn_upper_case_callback);
+    document.getElementById("lower-case").addEventListener('click', btn_lower_case_callback);
+    document.getElementById("proper-case").addEventListener('click', btn_proper_case_callback);
+    document.getElementById("sentence-case").addEventListener('click', btn_sentence_case_callback);
+    document.getElementById("save-text-file").addEventListener('click', btn_save_txt_callback);
+</script>
+
+</body>
+</html>

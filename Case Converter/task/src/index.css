@@ -1,0 +1,52 @@
+.main-container{
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100vh;
+    width: auto;
+    position: center;
+    margin: 1vh 1vw 1vh 1vw;
+}
+
+.title{
+    height: 5%;
+    text-align: left;
+    font-weight: bold;
+    vertical-align: center;
+    font-size: xx-large;
+    min-width: fit-content;
+    min-height: content-box;
+}
+
+.button-menu{
+    height: 6%;
+    display: flex;
+    align-items: center;
+    gap: 0.5%;
+    flex-flow: row nowrap;
+}
+
+.text-to-process{
+    font-size: medium;
+    alignment: center;
+    height: 85%;
+    min-height: auto;
+}
+
+.button-convert{
+    background-color: coral;
+    text-align: center;
+    font-size: medium;
+    flex-grow: 1;
+    height: 60%;
+    vertical-align: center;
+    min-width: fit-content;
+    min-height: fit-content;
+}
+
+.invisible-placeholder{
+    background-color: transparent;
+    height: 60%;
+    flex-grow: 10;
+    max-width: 60%;
+    min-width: 0;
+}
