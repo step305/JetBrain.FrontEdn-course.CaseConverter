@@ -1,7 +1,6 @@
 
 function replace_char_at(str, indx, new_char) {
-    let new_str = str.substr(0, indx) + new_char + str.substr(indx+1);
-    return new_str;
+    return str.substr(0, indx) + new_char + str.substr(indx + 1);
 }
 
 function convert_to_upper_case(str) {
@@ -19,7 +18,14 @@ function convert_to_proper_case(str) {
     str_array.forEach(function (elem, index, arr) {
         arr[index] = replace_char_at(elem, 0, elem.charAt(0).toUpperCase());
     });
-    return str_array.join(" ");
+    new_str = str_array.join(" ");
+
+    str_array = new_str.split("\n");
+    str_array.forEach(function (elem, index, arr) {
+        arr[index] = replace_char_at(elem, 0, elem.charAt(0).toUpperCase());
+    });
+    new_str = str_array.join("\n");
+    return new_str;
 }
 
 function convert_to_sentence_case(str) {
