@@ -33,21 +33,21 @@ function convert_to_sentence_case(str) {
 
     let str_array = new_str.split(".");
     str_array.forEach(function (elem, index, arr) {
-        first_letter_index = elem.search(/\p{Letter}/u);
+        let first_letter_index = elem.search(/\p{Letter}/u);
         arr[index] = replace_char_at(elem, first_letter_index, elem.charAt(first_letter_index).toUpperCase());
     });
     new_str = str_array.join(".");
 
     str_array = new_str.split("!");
     str_array.forEach(function (elem, index, arr) {
-        first_letter_index = elem.search(/\p{Letter}/u);
+        let first_letter_index = elem.search(/\p{Letter}/u);
         arr[index] = replace_char_at(elem, first_letter_index, elem.charAt(first_letter_index).toUpperCase());
     });
     new_str = str_array.join("!");
 
     str_array = new_str.split("?");
     str_array.forEach(function (elem, index, arr) {
-        first_letter_index = elem.search(/\p{Letter}/u);
+        let first_letter_index = elem.search(/\p{Letter}/u);
         arr[index] = replace_char_at(elem, first_letter_index, elem.charAt(first_letter_index).toUpperCase());
     });
     new_str = str_array.join("?");
