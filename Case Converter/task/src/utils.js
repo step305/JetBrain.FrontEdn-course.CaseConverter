@@ -56,31 +56,31 @@ function convert_to_sentence_case(str) {
 }
 
 function btn_upper_case_callback(event) {
-    text_field = document.getElementById(event.currentTarget.target_text_field_id);
+    let text_field = document.getElementById(event.currentTarget.target_text_field_id);
     text_field.value =
         convert_to_upper_case(text_field.value);
 }
 
 function btn_lower_case_callback(event) {
-    text_field = document.getElementById(event.currentTarget.target_text_field_id);
+    let text_field = document.getElementById(event.currentTarget.target_text_field_id);
     text_field.value =
         convert_to_lower_case(text_field.value);
 }
 
 function btn_proper_case_callback(event) {
-    text_field = document.getElementById(event.currentTarget.target_text_field_id);
+    let text_field = document.getElementById(event.currentTarget.target_text_field_id);
     text_field.value =
         convert_to_proper_case(text_field.value);
 }
 
 function btn_sentence_case_callback(event) {
-    text_field = document.getElementById(event.currentTarget.target_text_field_id);
+    let text_field = document.getElementById(event.currentTarget.target_text_field_id);
     text_field.value =
         convert_to_sentence_case(text_field.value);
 }
 
 function btn_save_txt_callback(event) {
-    text_field = document.getElementById(event.currentTarget.target_text_field_id);
+    let text_field = document.getElementById(event.currentTarget.target_text_field_id);
     let text = convert_to_sentence_case(text_field.value);
     let element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
